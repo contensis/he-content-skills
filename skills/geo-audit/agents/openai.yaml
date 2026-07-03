@@ -1,0 +1,4 @@
+interface:
+  display_name: "GEO audit"
+  short_description: "Audit a university web page for AI-search readiness — can AI search engines understand, cite, and surface it?"
+  default_prompt: "Use $geo-audit to audit this page content for AI-search readiness."

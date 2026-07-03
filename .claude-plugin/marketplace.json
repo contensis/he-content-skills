@@ -1,0 +1,16 @@
+{
+  "name": "he-content",
+  "owner": {
+    "name": "Richard Saunders",
+    "email": "r.saunders@zengenti.com"
+  },
+  "description": "Marketplace for higher-education web content skills.",
+  "plugins": [
+    {
+      "name": "he-content-skills",
+      "source": "./",
+      "description": "Content skills for higher-education websites: alt text generation and auditing, meta descriptions, GEO/AI-search audits, raw-copy refinement for the web, and content staleness audits.",
+      "category": "content"
+    }
+  ]
+}

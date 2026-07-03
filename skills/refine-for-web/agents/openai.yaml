@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refine for web"
+  short_description: "Turn raw submitted copy from faculties or departments into structured, web-ready university page content."
+  default_prompt: "Use $refine-for-web to turn this raw copy into web-ready content."

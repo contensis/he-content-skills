@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meta descriptions"
+  short_description: "Write or review SERP meta descriptions for university web pages, one page or many."
+  default_prompt: "Use $meta-descriptions to write a meta description for this page."

@@ -1,0 +1,19 @@
+{
+  "name": "he-content-skills",
+  "displayName": "HE Content Skills",
+  "version": "0.1.0",
+  "description": "Content skills for higher-education websites: alt text generation and auditing, meta descriptions, GEO/AI-search audits, raw-copy refinement for the web, and content staleness audits.",
+  "author": {
+    "name": "Richard Saunders",
+    "email": "r.saunders@zengenti.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "higher-education",
+    "content",
+    "seo",
+    "geo",
+    "accessibility",
+    "web-content"
+  ]
+}

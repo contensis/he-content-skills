@@ -1,0 +1,4 @@
+interface:
+  display_name: "Staleness audit"
+  short_description: "Flag potentially out-of-date claims on a university web page — fees, requirements, statistics — with risk ratings."
+  default_prompt: "Use $staleness-audit to review this page for out-of-date content."

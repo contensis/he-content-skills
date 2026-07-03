@@ -1,0 +1,4 @@
+interface:
+  display_name: "Alt text"
+  short_description: "Write image alt text, or audit existing alt text against WCAG 2.2 AA, for university web pages."
+  default_prompt: "Use $alt-text to write or audit alt text for these images."
