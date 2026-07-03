@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>HE Content Skills — a mortarboard resting on a fountain-pen nib</title>
+  <style>
+    :root { color: #37BFA7; }
+    @media (prefers-color-scheme: dark) { :root { color: #ffffff; } }
+  </style>
+  <g stroke="currentColor" fill="none" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <!-- pen nib -->
+    <path d="M186 210 L186 232 Q186 302 218 352 Q240 388 256 414 Q272 388 294 352 Q326 302 326 232 L326 210"/>
+    <!-- mortarboard -->
+    <path d="M256 96 L420 168 L256 240 L92 168 Z"/>
+    <!-- tassel cord -->
+    <path d="M256 168 Q340 160 396 186 L396 240" stroke-width="18"/>
+    <!-- nib slit -->
+    <path d="M256 320 L256 384" stroke-width="18"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="256" cy="168" r="14"/>
+    <circle cx="256" cy="296" r="16"/>
+    <rect x="382" y="240" width="28" height="48" rx="13"/>
+  </g>
+</svg>

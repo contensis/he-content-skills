@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/icon.svg" alt="HE Content Skills logo: a graduation mortarboard resting on a fountain-pen nib" width="128">
+</p>
+
 # HE Content Skills
 
 Agent skills for higher-education web content teams: writing, auditing, and
