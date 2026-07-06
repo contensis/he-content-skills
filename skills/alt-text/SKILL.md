@@ -27,7 +27,7 @@ Given a list of images with their existing alt text (or lack of it), a page URL,
 
 **For all alt text:**
 
-- Do not begin with "Image of", "Photo of", "Picture of", or similar — screen readers already announce the element as an image
+- Start directly with the image's meaning or function — never "Image of", "Photo of", "Picture of", or similar; screen readers already announce the element as an image
 - Maximum 125 characters for standard alt text
 - Verify character counts with a real tool where one is available (shell `wc -c`, Python `len()`, or your platform's equivalent) — do not estimate
 - Only describe what the image or its description actually shows — do not invent visual detail. Flag any alt text you could not write accurately without seeing the image

@@ -11,6 +11,8 @@ description: Use when writing, rewriting, or reviewing meta descriptions for uni
 
 Given the body content of a web page (or a page title plus key points), write a meta description suitable for use in the page's `<meta name="description">` tag.
 
+If an existing meta description is supplied, first check it against the Constraints below and state whether it already **Passes** or **Needs improvement** — then always propose an improved version regardless of that verdict.
+
 If given multiple pages, process each in turn and return results in a table.
 
 ## Context
@@ -35,6 +37,7 @@ If given multiple pages, process each in turn and return results in a table.
 
 **Single page:**
 ```
+Existing description: [Pass / Needs improvement / None supplied]
 Meta description: [text]
 Characters: [count]
 Keyword included: [yes/no — state the keyword]
@@ -43,7 +46,7 @@ Notes: [any caveats or alternatives worth considering]
 ```
 
 **Multiple pages:**
-| Page | Meta description | Chars | Notes |
-|------|-----------------|-------|-------|
+| Page | Existing | Meta description | Chars | Notes |
+|------|----------|-------------------|-------|-------|
 
 Flag any pages where the source content is insufficient to write an accurate description — do not fabricate.

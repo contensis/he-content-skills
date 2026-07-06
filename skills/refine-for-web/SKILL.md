@@ -28,6 +28,7 @@ Take unstructured source content — typically a Word document, email, or pasted
 
 ## Constraints
 
+- Verify character counts (page title, meta description) with a real tool where one is available (shell `wc -c`, Python `len()`, or your platform's equivalent) — do not estimate
 - Do not invent or infer course details not present in the source material — this includes duration, start dates, and class sizes; if the source doesn't state it, tag it [MISSING] rather than assuming
 - Preserve every grade, subject, and value in entry requirements exactly as provided — presentation may be reformatted (e.g. into a list), but do not change the wording of requirements or reorder qualifications
 - Preserve all fee amounts and their cycle labels (e.g. "2025/26") exactly as provided

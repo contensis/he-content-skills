@@ -11,6 +11,10 @@ description: Use when auditing university web page content against GEO dimension
 
 Given the full text content of a single web page — headings, body copy, any FAQs, plus the page title and any visible metadata (meta description, if known) — audit it against the five GEO dimensions below. For each dimension, give a rating of **Strong**, **Needs work**, or **Weak**, a one-sentence finding, and a specific recommendation.
 
+- **Strong** = the dimension is fully addressed; an AI search engine could extract and cite this content with no changes
+- **Needs work** = the dimension is partially addressed — some of the page meets it, some doesn't, or it works but not consistently
+- **Weak** = the dimension is largely absent or actively hurts citability
+
 **Input handling:**
 
 - Pasted plain text is the expected input — no HTML required
