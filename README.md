@@ -49,6 +49,40 @@ Scan page content and flag claims that may be out of date — fees, entry
 requirements, staff names, statistics, deadlines — anchored to today's date and
 the current academic year, with a risk rating and reason per flag.
 
+## Agents (Claude Code plugin only)
+
+Unlike the skills above, these are Claude Code subagents ([agents/](agents/)) —
+not portable prompt specs, since they rely on Claude Code's Agent tool to fan
+out work in parallel. Installed automatically with the Claude Code plugin.
+
+### `geo-audit-batch`
+
+Scans many university web pages for GEO readiness in one pass — course,
+research, news, or policy pages: takes a list of URLs or a sitemap, dispatches
+a `geo-audit-page` subagent per page in parallel, then returns a cross-page
+summary (readiness distribution, recurring weak dimensions, a worst-first
+worklist) plus the full per-page findings.
+
+### `geo-audit-page`
+
+Audits a single page against the `geo-audit` skill's five dimensions. Used
+internally by `geo-audit-batch`; can also be invoked directly for one page.
+
+### `staleness-audit-batch`
+
+Scans many university web pages for stale or unverifiable content in one
+pass — fees, entry requirements, staff names, statistics, deadlines: takes a
+list of URLs or a sitemap, establishes a single date anchor for the whole
+batch, dispatches a `staleness-audit-page` subagent per page in parallel, then
+returns a cross-page summary (flag totals by risk, pages with Critical issues,
+a worst-first worklist) plus the full per-page flags.
+
+### `staleness-audit-page`
+
+Audits a single page against the `staleness-audit` skill, given a date anchor.
+Used internally by `staleness-audit-batch`; can also be invoked directly for
+one page.
+
 ## Installing
 
 ### Dev install (symlinks, edits live immediately)
