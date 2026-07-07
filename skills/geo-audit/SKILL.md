@@ -9,7 +9,7 @@ description: Use when auditing university web page content against GEO dimension
 
 ## Task
 
-Given the full text content of a single web page — headings, body copy, any FAQs, plus the page title and any visible metadata (meta description, if known) — audit it against the five GEO dimensions below. For each dimension, give a rating of **Strong**, **Needs work**, or **Weak**, a one-sentence finding, and a specific recommendation.
+Given the full text content of a single web page — headings, body copy, any FAQs, plus the page title and any visible metadata (meta description, if known) — audit it against the five GEO dimensions below. For each dimension, give a rating of **Strong**, **Needs work**, or **Weak**, a one-sentence finding, and a specific recommendation. Every finding must quote or point to the specific text it's judging — a finding that could apply to any page on any topic is not acceptable.
 
 - **Strong** = the dimension is fully addressed; an AI search engine could extract and cite this content with no changes
 - **Needs work** = the dimension is partially addressed — some of the page meets it, some doesn't, or it works but not consistently
@@ -20,6 +20,7 @@ Given the full text content of a single web page — headings, body copy, any FA
 - Pasted plain text is the expected input — no HTML required
 - If given only a URL, fetch the page if your tools allow; otherwise ask for the content to be pasted
 - If the content is too partial to audit fairly (a fragment, a single section), say so and list what is missing rather than rating it
+- If pasted plain text has no clear heading markers, infer headings from short standalone lines that introduce a following paragraph or list; if headings can't be distinguished from body copy with reasonable confidence, say so and ask for headings to be marked (e.g. with `##` or a trailing colon) rather than guessing at Dimension 2
 
 ## Context
 
