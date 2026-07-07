@@ -15,7 +15,7 @@ This skill operates in two modes. Infer the mode from the input: existing alt te
 Given a description of an image (or the image itself, if your platform supports it), write appropriate alt text.
 
 **Mode B: Audit**
-Given a list of images with their existing alt text (or lack of it), a page URL, or pasted markup, audit each against WCAG 2.2 AA and return a structured report.
+Given a list of images with their existing alt text (or lack of it), a page URL, or pasted markup, audit every image against WCAG 2.2 AA and return a structured report — no image omitted, regardless of list length.
 
 ## Context
 
@@ -40,7 +40,7 @@ Given a list of images with their existing alt text (or lack of it), a page URL,
 
 - Rate each item: ✅ Pass / ⚠️ Warning / ❌ Fail
 - Fail = missing alt text on a non-decorative image, or alt text that conveys no meaning
-- Warning = alt text present but suboptimal (too long, starts with "image of", describes appearance rather than meaning, redundant with adjacent text, or describes a linked image's appearance rather than the link's purpose)
+- Warning = alt text present but suboptimal (too long, starts with "image of", describes appearance rather than meaning, redundant with adjacent text, describes a linked image's appearance rather than the link's purpose, or non-empty alt text on a genuinely decorative image)
 - Pass = appropriate alt text for the image type and context
 
 ## Output format
@@ -58,8 +58,8 @@ Summary line: `X images reviewed — ❌ Y fail, ⚠️ Z warnings, ✅ W pass`
 
 Then a table, using the icons in the Rating column (✅ Pass, ⚠️ Warning, ❌ Fail):
 
-| #   | Image / location | Existing alt text | Rating     | Issue | Suggested fix |
-| --- | ---------------- | ----------------- | ---------- | ----- | ------------- |
-| 1   | hero-campus.jpg  | "image of campus" | ⚠️ Warning | Starts with "image of" | "Aerial view of the Riverside campus at dusk" |
+| #   | Image / location | Existing alt text  | Rating     | Issue                   | Suggested fix                                |
+| --- | ---------------- | ------------------ | ---------- | ----------------------- | --------------------------------------------- |
+| 1   | hero-campus.jpg   | "image of campus" | ⚠️ Warning | Starts with "image of"  | "Aerial view of the Riverside campus at dusk" |
 
 End with a prioritised fix list: Fails first, then Warnings.
