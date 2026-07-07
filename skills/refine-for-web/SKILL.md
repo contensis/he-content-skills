@@ -29,6 +29,7 @@ Take unstructured source content — typically a Word document, email, or pasted
 ## Constraints
 
 - Verify character counts (page title, meta description) with a real tool where one is available (shell `wc -c`, Python `len()`, or your platform's equivalent) — do not estimate
+- Verify reading level with a real readability calculation where one is available (e.g. a Flesch-Kincaid library or formula) rather than eyeballing it; if no tool is available, favour shorter sentences and common words over guessing at a grade level
 - Do not invent or infer course details not present in the source material — this includes duration, start dates, and class sizes; if the source doesn't state it, tag it [MISSING] rather than assuming
 - Preserve every grade, subject, and value in entry requirements exactly as provided — presentation may be reformatted (e.g. into a list), but do not change the wording of requirements or reorder qualifications
 - Preserve all fee amounts and their cycle labels (e.g. "2025/26") exactly as provided
@@ -62,7 +63,7 @@ Produce the following fields in order:
 Max 60 characters. Should name the course and level clearly. Give the character count in italics on the line below, e.g. `*(25 chars ✓)*`.
 
 **Meta description**
-120–160 characters. Summarise the course and its appeal. Include a natural hook. Append the character count in italics.
+150–160 characters; do not go below 120 — short descriptions are expanded or replaced by Google with arbitrary page content. Summarise the course and its appeal. Include a natural hook. Append the character count in italics.
 
 **Introduction paragraph**
 50–80 words. What the course is, why it's worth studying, what makes this institution's version distinctive (if the source supports it — accreditation counts). No bullet points.
