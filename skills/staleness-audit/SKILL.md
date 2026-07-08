@@ -41,10 +41,12 @@ Scan the full document, not just the opening section — check every category li
 
 | Level | Definition |
 |-------|------------|
-| Critical | Regulatory or compliance content — fees, entry requirements, visa/immigration information, accreditation status. Incorrect information here creates legal or reputational risk |
-| High | Statistics, rankings, dated claims, named funding awards, named partners. Likely to change annually or with each cycle |
-| Medium | Staff names, job titles, contact details, named software or tools. Changes with personnel or procurement |
-| Low | General descriptive claims that are plausible but unverifiable without checking (e.g. "our graduates go on to…") |
+| 🔴 Critical | Regulatory or compliance content — fees, entry requirements, visa/immigration information, accreditation status. Incorrect information here creates legal or reputational risk |
+| 🟠 High | Statistics, rankings, dated claims, named funding awards, named partners. Likely to change annually or with each cycle |
+| 🟡 Medium | Staff names, job titles, contact details, named software or tools. Changes with personnel or procurement |
+| 🟢 Low | General descriptive claims that are plausible but unverifiable without checking (e.g. "our graduates go on to…") |
+
+Use these emoji in the Risk column of the flag table and in the summary line so risk is scannable at a glance.
 
 ## Output format
 
