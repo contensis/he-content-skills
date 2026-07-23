@@ -4,6 +4,8 @@
 
 # HE Content Skills
 
+[![skills.sh](https://skills.sh/b/contensis/he-content-skills)](https://skills.sh/contensis/he-content-skills)
+
 Agent skills for higher-education web content teams: writing, auditing, and
 refining university website content with AI assistance.
 
