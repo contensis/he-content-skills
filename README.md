@@ -26,19 +26,17 @@ Audit), inferred from the input.
 ### 🔎 `geo-audit`
 
 Audit a page against five GEO (Generative Engine Optimization) dimensions —
-can AI-powered search engines (ChatGPT Search, Perplexity, Google AI Overviews)
-understand, cite, and surface it? Produces ratings, quick wins, and an example
-rewrite.
+can AI-powered search engines (ChatGPT Search, Perplexity, Google AI Overviews,
+Bing Copilot) understand, cite, and surface it? Produces ratings, quick wins,
+and an example rewrite.
 
 ### 🎓 `graduate-outcomes`
 
-Write or refresh a course page's careers/graduate-outcomes section —
-sourced roles, sectors, salary, and further-study routes for prospective
-students. Standalone (not a mode of `refine-for-web`): searches supplied
-content and, where the tool supports it, the web (HESA/Discover Uni,
-Prospects.ac.uk, LMI For All) for evidence, tagging sourced vs. inferred
-claims separately and never fabricating stats, employers, or alumni.
-Worked example: [input](skills/graduate-outcomes/examples/input-01.txt) →
+Write or refresh a course page's careers/graduate-outcomes section — roles,
+sectors, salary, and further-study routes. Searches supplied content and, where
+the tool allows, the web (HESA/Discover Uni, Prospects.ac.uk, LMI For All);
+tags sourced and inferred claims separately and never fabricates stats,
+employers, or alumni. Worked example: [input](skills/graduate-outcomes/examples/input-01.txt) →
 [output](skills/graduate-outcomes/examples/output-01.md).
 
 ### ✂️ `meta-descriptions`
@@ -50,9 +48,10 @@ counts.
 ### 📝 `refine-for-web`
 
 Turn raw submitted copy — Word documents, emails, pasted text from faculties or
-departments — into structured, web-ready course page content. Preserves entry
-requirements and fees verbatim, tags claims needing verification, and applies
-GEO principles (question-form headings, explicit entity facts).
+departments — into structured, web-ready page content, typically course pages.
+Preserves entry requirements and fees verbatim, tags claims needing
+verification, and applies GEO principles (question-form headings, explicit
+entity facts).
 Worked example: [input](skills/refine-for-web/examples/input-01.txt) →
 [output](skills/refine-for-web/examples/output-01.md).
 
@@ -67,8 +66,8 @@ the current academic year, with a risk rating and reason per flag.
 Crawl a whole university website (not just a single page) and audit it
 against eight criteria — brand, quality, accessibility, GDPR/privacy policy,
 ownership, freshness, audience/analytics access, and duplication across the
-web estate — with a Red/Amber/Green rating per criterion. See
-[ADR-0003](docs/adr/0003-website-audit-scope.md).
+web estate — rated Red/Amber/Green, or Not assessed where the evidence wasn't
+available. See [ADR-0003](docs/adr/0003-website-audit-scope.md).
 
 ### ✍️ `write-blogpost`
 
@@ -86,12 +85,11 @@ out work in parallel. Installed automatically with the Claude Code plugin.
 
 ### `geo-audit-batch`
 
-Scans many university web pages for GEO readiness in one pass — course,
-research, news, or policy pages: takes a list of URLs or a sitemap, dispatches
-a `geo-audit-page` subagent per page in parallel, then returns a cross-page
-summary (readiness distribution, recurring weak dimensions, pages flagged for
-possible JavaScript rendering issues, a worst-first
-worklist) plus the full per-page findings.
+Audits many pages for GEO readiness in one pass. Takes a list of URLs or a
+sitemap, runs a `geo-audit-page` subagent per page in parallel, and returns a
+cross-page summary — readiness distribution, recurring weak dimensions, pages
+with possible JavaScript rendering issues, a worst-first worklist — plus the
+full per-page findings.
 
 ### `geo-audit-page`
 
@@ -100,12 +98,11 @@ internally by `geo-audit-batch`; can also be invoked directly for one page.
 
 ### `staleness-audit-batch`
 
-Scans many university web pages for stale or unverifiable content in one
-pass — fees, entry requirements, staff names, statistics, deadlines: takes a
-list of URLs or a sitemap, establishes a single date anchor for the whole
-batch, dispatches a `staleness-audit-page` subagent per page in parallel, then
-returns a cross-page summary (flag totals by risk, pages with Critical issues,
-a worst-first worklist) plus the full per-page flags.
+Audits many pages for stale or unverifiable content in one pass. Takes a list
+of URLs or a sitemap, sets one date anchor for the whole batch, runs a
+`staleness-audit-page` subagent per page in parallel, and returns a cross-page
+summary — flag totals by risk, pages with Critical issues, a worst-first
+worklist — plus the full per-page flags.
 
 ### `staleness-audit-page`
 
@@ -164,23 +161,32 @@ skills/<name>/
   SKILL.md              the skill (Agent Skills standard)
   agents/openai.yaml    Codex UI metadata (display name, $skill-name prompt)
   examples/             worked input → output pairs (where present)
+agents/                 Claude Code subagents (batch/page audits)
 .claude-plugin/         Claude Code plugin + marketplace manifests
 scripts/
   build-assistants.py   generates dist/ assistant bundles
 install.sh              multi-tool dev installer (symlinks)
 docs/
+  adr/                        architecture decision records
   using-with-other-tools.md   per-tool usage + portability conventions
+CONTEXT.md              glossary of terms and skill boundaries
 ```
 
 ## Adding or editing a skill
 
-- Folder name, `name:` frontmatter, and H1 title stay in sync;
-  `description:` starts with "Use when…" and states triggers, not workflow
+- Folder name, `name:` frontmatter, and H1 title stay in sync. Frontmatter
+  holds only `name` and `description`; `description` starts with "Use when…"
+  and states triggers, not workflow
 - Keep skills tool-agnostic — see the conventions in
   [docs/using-with-other-tools.md](docs/using-with-other-tools.md)
+- Keep each skill standalone — no links or references to ADRs, `docs/`,
+  other skills, or repo files outside the skill's own folder, since installed
+  copies and hosted-assistant bundles only carry the skill itself. Record the
+  reasoning in `docs/adr/` and `CONTEXT.md` instead
 - Add `agents/openai.yaml` with `display_name`, `short_description`, and a
   `default_prompt` using the `$skill-name` convention
 - Rerun `./install.sh` (it prunes symlinks for renamed/deleted skills) and
-  `python3 scripts/build-assistants.py`
+  `python3 scripts/build-assistants.py`, which fails if a skill exceeds the
+  8,000-character hosted-assistant limit
 - Update the skill list in this README and, if the plugin summary changes,
   the descriptions in `.claude-plugin/`
