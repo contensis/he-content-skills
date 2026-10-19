@@ -134,6 +134,28 @@ The repo doubles as a Claude Code plugin marketplace
 ([.claude-plugin/](.claude-plugin/)): add it with `/plugin marketplace add` and
 install `he-content-skills`.
 
+### GitHub Copilot CLI
+
+Copilot CLI reads the same `.claude-plugin/` marketplace, so you can install
+the skills without cloning the repo:
+
+```bash
+copilot plugin marketplace add contensis/he-content-skills
+copilot plugin install he-content-skills@he-content
+```
+
+If you've cloned the repo, `./install.sh` symlinks the skills into
+`~/.agents/skills/` instead (when `~/.copilot` exists), and edits apply right
+away.
+
+In a Copilot session, `/skills list` shows the installed skills and
+`/skills reload` picks up changes. Copilot chooses a skill from its
+description, or you can name one with a slash, e.g. "Use the /geo-audit skill
+on https://www.example.ac.uk/courses/history".
+
+Only the skills work in Copilot CLI. The batch and page agents above are
+Claude Code subagents.
+
 ### Hosted assistants (Custom GPTs, Gemini Gems, Microsoft 365 Copilot)
 
 ```bash
