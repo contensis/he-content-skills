@@ -15,7 +15,7 @@ machine:
 |------|-----------------|-------|
 | Claude Code | `~/.claude/skills/` | Also installable as a plugin via `.claude-plugin/` |
 | Codex CLI (OpenAI) | `~/.agents/skills/` | Each skill ships `agents/openai.yaml` with Codex UI metadata; invoke explicitly with `$skill-name` |
-| GitHub Copilot | `~/.agents/skills/` or `~/.copilot/skills/` | Works in VS Code agent mode, Copilot CLI, coding agent, and code review |
+| GitHub Copilot | `~/.agents/skills/` or `~/.copilot/skills/` | Works in VS Code agent mode, Copilot CLI, coding agent, and code review. Copilot CLI can also install the plugin — see the README |
 | Gemini CLI | `~/.gemini/skills/` | |
 
 For a project-level (checked-in) install instead, copy or symlink the skill
@@ -38,14 +38,14 @@ declarative agents — run `python3 scripts/build-assistants.py` to generate
 paste-ready and deployable bundles under `dist/` with the environment caveats
 below already prepended. See the README for details.
 
-Two things to know when using them this way:
+Things to know when using them this way:
 
 - Skills that offer to fetch URLs (staleness-audit, geo-audit) say "if your
   tools allow" — in a tool without browsing, paste the page text instead.
 - graduate-outcomes searches the web for outcomes evidence; without browsing
   it says so and falls back to roles and sectors inferred from the course
   subject, flagged as inferred rather than sourced.
-- website-audit crawls a site from a starting URL; without browsing it says
+- website-audit crawls a site section from its URL; without browsing it says
   so and asks for a list of page URLs or pasted page content instead, so
   coverage depends on what you supply.
 - Character-count verification (alt-text, meta-descriptions) expects a real
@@ -59,6 +59,7 @@ When editing or adding skills, preserve these:
 - Frontmatter uses only the core spec fields (`name`, `description`)
 - No references to tool-specific features — capability checks are phrased as
   "if your tools allow" / "your platform's equivalent"
-- Cross-references to sibling skills say "from this collection, if available"
+- No references to other skills, ADRs, or repo files outside the skill's own
+  folder — each skill must work on its own
 - No `@`-style force-loading links; supporting files are referenced with
   relative markdown links

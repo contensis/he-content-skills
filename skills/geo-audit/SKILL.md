@@ -59,7 +59,7 @@ State key facts on the page itself. AI search may follow links to other pages, b
 
 ### 4 — Specificity and citability
 
-Does the page contain specific, verifiable figures and named claims? AI search engines prefer to cite concrete data over general statements. Explicit dates and prices matter most for time-sensitive questions such as fees, deadlines and entry requirements, so check that time-bound facts carry a year and the page shows when it was last reviewed. (Whether those facts are still current is `staleness-audit`'s job.)
+Does the page contain specific, verifiable figures and named claims? AI search engines prefer to cite concrete data over general statements. Explicit dates and prices matter most for time-sensitive questions such as fees, deadlines and entry requirements, so check that time-bound facts carry a year and the page shows when it was last reviewed. Don't judge whether those facts are still current.
 
 Examples of weak vs. strong:
 - Weak: "Applications open in autumn" → Strong: "Applications for 2027 entry open 1 October via UCAS"
