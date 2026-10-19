@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write blogpost"
+  short_description: "Draft a new blog post from a brief, or critique an existing draft against a quality rubric."
+  default_prompt: "Use $write-blogpost to draft a post about [topic] for [audience]."

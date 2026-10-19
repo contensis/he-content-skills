@@ -68,6 +68,14 @@ ownership, freshness, audience/analytics access, and duplication across the
 web estate — with a Red/Amber/Green rating per criterion. See
 [ADR-0003](docs/adr/0003-website-audit-scope.md).
 
+### ✍️ `write-blogpost`
+
+Draft a new blog post from a topic/audience/goal brief, or critique an
+existing draft against a seven-dimension rubric (hook, structure, voice,
+clarity, narrative arc, SEO/discoverability, takeaway/CTA). Unlike the rest of
+this collection, not scoped to HE content — see
+[ADR-0002](docs/adr/0002-write-blogpost-generic-scope.md).
+
 ## Agents (Claude Code plugin only)
 
 Unlike the skills above, these are Claude Code subagents ([agents/](agents/)) —
