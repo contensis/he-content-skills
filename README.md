@@ -60,6 +60,14 @@ Scan page content and flag claims that may be out of date — fees, entry
 requirements, staff names, statistics, deadlines — anchored to today's date and
 the current academic year, with a risk rating and reason per flag.
 
+### 🌐 `website-audit`
+
+Crawl a whole university website (not just a single page) and audit it
+against eight criteria — brand, quality, accessibility, GDPR/privacy policy,
+ownership, freshness, audience/analytics access, and duplication across the
+web estate — with a Red/Amber/Green rating per criterion. See
+[ADR-0003](docs/adr/0003-website-audit-scope.md).
+
 ## Agents (Claude Code plugin only)
 
 Unlike the skills above, these are Claude Code subagents ([agents/](agents/)) —
