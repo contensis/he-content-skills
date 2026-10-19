@@ -32,6 +32,8 @@ Once all pages are audited, parse each subagent's `SUMMARY:` line and produce a 
 | Page | Readiness | Weak dimensions | Needs-work dimensions |
 |---|---|---|---|
 
+**Possible rendering issues** — list any pages whose `SUMMARY:` line carries `flags: possible-rendering-issue`. Their ratings may understate the content because sections appear to be loaded by JavaScript; recommend re-auditing them from pasted content, and note that a site-wide pattern here suggests AI crawlers may be missing the same content. Omit this section if no pages are flagged.
+
 **Recurring issues** — across all audited pages, which dimensions come up as Weak or Needs work most often, ranked by frequency. Name the dimension and the count/fraction of pages affected.
 
 **Prioritized worklist** — pages ordered worst-first (Not ready before Partial, more weak dimensions before fewer), so an editor knows where to start.
