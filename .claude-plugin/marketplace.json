@@ -9,7 +9,7 @@
     {
       "name": "he-content-skills",
       "source": "./",
-      "description": "Content skills for higher-education websites: alt text generation and auditing, meta descriptions, GEO/AI-search audits, raw-copy refinement for the web, and content staleness audits.",
+      "description": "Content skills for higher-education websites: alt text generation and auditing, meta descriptions, GEO/AI-search audits, raw-copy refinement for the web, graduate outcomes sections, content staleness audits, and whole-website audits. Also includes write-blogpost, a generic (non-HE) blog drafting/critique skill.",
       "category": "content"
     }
   ]

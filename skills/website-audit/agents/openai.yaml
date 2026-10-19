@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website audit"
+  short_description: "Crawl a university website and audit it against brand, quality, accessibility, GDPR, ownership, freshness, analytics access, and duplication criteria."
+  default_prompt: "Use $website-audit to audit this website against the standard criteria."

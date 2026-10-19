@@ -1,0 +1,6 @@
+Course: BSc (Hons) Computer Science, undergraduate, 3 years full-time.
+
+Department-supplied notes:
+- Our last cohort survey (2023 graduates, response rate low, department internal, not independently verified) suggested most graduates went into software development or IT consultancy roles.
+- We don't hold reliable further-study or salary data ourselves — please check nationally published sources.
+- New this year: a final-year "Applied AI" module, added because two local employers (unnamed in this note) said they wanted graduates with more ML exposure.

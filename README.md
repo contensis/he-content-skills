@@ -30,6 +30,17 @@ can AI-powered search engines (ChatGPT Search, Perplexity, Google AI Overviews)
 understand, cite, and surface it? Produces ratings, quick wins, and an example
 rewrite.
 
+### 🎓 `graduate-outcomes`
+
+Write or refresh a course page's careers/graduate-outcomes section —
+sourced roles, sectors, salary, and further-study routes for prospective
+students. Standalone (not a mode of `refine-for-web`): searches supplied
+content and, where the tool supports it, the web (HESA/Discover Uni,
+Prospects.ac.uk, LMI For All) for evidence, tagging sourced vs. inferred
+claims separately and never fabricating stats, employers, or alumni.
+Worked example: [input](skills/graduate-outcomes/examples/input-01.txt) →
+[output](skills/graduate-outcomes/examples/output-01.md).
+
 ### ✂️ `meta-descriptions`
 
 Write, rewrite, or review SERP meta descriptions — course, research, news, or
@@ -50,6 +61,22 @@ Worked example: [input](skills/refine-for-web/examples/input-01.txt) →
 Scan page content and flag claims that may be out of date — fees, entry
 requirements, staff names, statistics, deadlines — anchored to today's date and
 the current academic year, with a risk rating and reason per flag.
+
+### 🌐 `website-audit`
+
+Crawl a whole university website (not just a single page) and audit it
+against eight criteria — brand, quality, accessibility, GDPR/privacy policy,
+ownership, freshness, audience/analytics access, and duplication across the
+web estate — with a Red/Amber/Green rating per criterion. See
+[ADR-0003](docs/adr/0003-website-audit-scope.md).
+
+### ✍️ `write-blogpost`
+
+Draft a new blog post from a topic/audience/goal brief, or critique an
+existing draft against a seven-dimension rubric (hook, structure, voice,
+clarity, narrative arc, SEO/discoverability, takeaway/CTA). Unlike the rest of
+this collection, not scoped to HE content — see
+[ADR-0002](docs/adr/0002-write-blogpost-generic-scope.md).
 
 ## Agents (Claude Code plugin only)
 

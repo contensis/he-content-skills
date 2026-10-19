@@ -42,6 +42,12 @@ Two things to know when using them this way:
 
 - Skills that offer to fetch URLs (staleness-audit, geo-audit) say "if your
   tools allow" — in a tool without browsing, paste the page text instead.
+- graduate-outcomes searches the web for outcomes evidence; without browsing
+  it says so and falls back to roles and sectors inferred from the course
+  subject, flagged as inferred rather than sourced.
+- website-audit crawls a site from a starting URL; without browsing it says
+  so and asks for a list of page URLs or pasted page content instead, so
+  coverage depends on what you supply.
 - Character-count verification (alt-text, meta-descriptions) expects a real
   tool — in ChatGPT this means the code interpreter (Python `len()`); if the
   tool can't run code, treat counts as estimates and say so.
