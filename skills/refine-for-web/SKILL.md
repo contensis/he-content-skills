@@ -72,7 +72,7 @@ Max 60 characters. Should name the course and level clearly. Give the character 
 Suggested sections based on source content — include only sections supported by the source material. Prefer the question-form headings where they read naturally — AI search engines extract answers more reliably from question-aligned headings (see the geo-audit skill in this collection, if available); the declarative forms are acceptable fallbacks:
 - What will you study? / What you'll study
 - How will you learn? / How you'll learn
-- Where can it take you? / Where it can take you
+- Where can it take you? / Where it can take you — for fuller sourcing and tagging of this section, use the `graduate-outcomes` skill from this collection, if available
 - What are the entry requirements? / Entry requirements
 - Fees and funding
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graduate outcomes"
+  short_description: "Write or refresh a course page's careers/graduate-outcomes section — sourced roles, sectors, salary, and further study routes."
+  default_prompt: "Use $graduate-outcomes to write the graduate outcomes section for this course."

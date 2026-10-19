@@ -28,6 +28,17 @@ can AI-powered search engines (ChatGPT Search, Perplexity, Google AI Overviews)
 understand, cite, and surface it? Produces ratings, quick wins, and an example
 rewrite.
 
+### 🎓 `graduate-outcomes`
+
+Write or refresh a course page's careers/graduate-outcomes section —
+sourced roles, sectors, salary, and further-study routes for prospective
+students. Standalone (not a mode of `refine-for-web`): searches supplied
+content and, where the tool supports it, the web (HESA/Discover Uni,
+Prospects.ac.uk, LMI For All) for evidence, tagging sourced vs. inferred
+claims separately and never fabricating stats, employers, or alumni.
+Worked example: [input](skills/graduate-outcomes/examples/input-01.txt) →
+[output](skills/graduate-outcomes/examples/output-01.md).
+
 ### ✂️ `meta-descriptions`
 
 Write, rewrite, or review SERP meta descriptions — course, research, news, or
