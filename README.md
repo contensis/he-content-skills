@@ -89,7 +89,8 @@ out work in parallel. Installed automatically with the Claude Code plugin.
 Scans many university web pages for GEO readiness in one pass — course,
 research, news, or policy pages: takes a list of URLs or a sitemap, dispatches
 a `geo-audit-page` subagent per page in parallel, then returns a cross-page
-summary (readiness distribution, recurring weak dimensions, a worst-first
+summary (readiness distribution, recurring weak dimensions, pages flagged for
+possible JavaScript rendering issues, a worst-first
 worklist) plus the full per-page findings.
 
 ### `geo-audit-page`
