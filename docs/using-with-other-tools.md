@@ -38,14 +38,14 @@ declarative agents — run `python3 scripts/build-assistants.py` to generate
 paste-ready and deployable bundles under `dist/` with the environment caveats
 below already prepended. See the README for details.
 
-Two things to know when using them this way:
+Things to know when using them this way:
 
 - Skills that offer to fetch URLs (staleness-audit, geo-audit) say "if your
   tools allow" — in a tool without browsing, paste the page text instead.
 - graduate-outcomes searches the web for outcomes evidence; without browsing
   it says so and falls back to roles and sectors inferred from the course
   subject, flagged as inferred rather than sourced.
-- website-audit crawls a site from a starting URL; without browsing it says
+- website-audit crawls a site section from its URL; without browsing it says
   so and asks for a list of page URLs or pasted page content instead, so
   coverage depends on what you supply.
 - Character-count verification (alt-text, meta-descriptions) expects a real

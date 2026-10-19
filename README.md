@@ -63,19 +63,18 @@ the current academic year, with a risk rating and reason per flag.
 
 ### 🌐 `website-audit`
 
-Crawl a whole university website (not just a single page) and audit it
-against eight criteria — brand, quality, accessibility, GDPR/privacy policy,
-ownership, freshness, audience/analytics access, and duplication across the
-web estate — rated Red/Amber/Green, or Not assessed where the evidence wasn't
-available. See [ADR-0003](docs/adr/0003-website-audit-scope.md).
+Crawl a section of a university website — e.g. `/courses` or a department's
+pages — and audit it against eight criteria: brand, quality, accessibility,
+GDPR/privacy policy, ownership, freshness, audience/analytics access, and
+duplication with the rest of the site. Rated Red/Amber/Green, or Not assessed
+where the evidence wasn't available.
 
 ### ✍️ `write-blogpost`
 
 Draft a new blog post from a topic/audience/goal brief, or critique an
 existing draft against a seven-dimension rubric (hook, structure, voice,
 clarity, narrative arc, SEO/discoverability, takeaway/CTA). Unlike the rest of
-this collection, not scoped to HE content — see
-[ADR-0002](docs/adr/0002-write-blogpost-generic-scope.md).
+this collection, not scoped to HE content.
 
 ## Agents (Claude Code plugin only)
 
