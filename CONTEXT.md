@@ -14,7 +14,7 @@ A generic, audience-agnostic skill for drafting and critiquing blog posts — no
 
 A standalone skill that produces or audits the careers/further-study outcomes content for a course detail page — the roles, sectors, further-study routes, and (where sourced) employment statistics a prospective student could expect after completing a course.
 
-Distinct from `refine-for-web`'s "Where can it take you?" body section: that section is produced as part of a full-document rewrite from raw source copy. `graduate-outcomes` is invokable on its own, e.g. to add or refresh just the outcomes section of an existing page without a full rewrite. `refine-for-web` may reference `graduate-outcomes` the way it already references `alt-text` and `geo-audit`.
+Distinct from `refine-for-web`'s "Where can it take you?" body section: that section is produced as part of a full-document rewrite from raw source copy. `graduate-outcomes` is invokable on its own, e.g. to add or refresh just the outcomes section of an existing page without a full rewrite.
 
 **Sourcing standard.** The skill actively looks for outcomes evidence — in supplied source content first, then more broadly on the web when the runtime supports fetching/search. Acceptable source types: HESA Graduate Outcomes / Discover Uni, Prospects.ac.uk, LMI For All, professional/regulatory body sites, and the institution's own published data. No general blogs, forums, or unattributed listicles. Every externally sourced stat is cited (source name + URL + date retrieved), mirroring `staleness-audit`'s date-anchoring since these figures decay fast.
 

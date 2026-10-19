@@ -26,7 +26,7 @@ Used to guide drafting in Mode A and to score in Mode B (✅ Pass / ⚠️ Warni
 3. **Voice & tone consistency** — one consistent voice throughout, matched to the stated audience
 4. **Clarity & concision** — no padding, jargon is justified or explained, one idea per paragraph
 5. **Narrative/argument arc** — a through-line connecting sections, not a list of disconnected points
-6. **SEO/discoverability** — headings answer the questions a reader would actually search, natural (not stuffed) keyword use. Where useful, point to `meta-descriptions` (SERP snippet) and `geo-audit` (AI-search discoverability) from this collection, if available
+6. **SEO/discoverability** — headings answer the questions a reader would actually search, natural (not stuffed) keyword use
 7. **Clear takeaway/CTA** — the reader knows what to do or think next by the end
 
 **Fail** = the dimension actively undermines the post (e.g. no hook, no discernible structure). **Warning** = present but weak. **Pass** = meets the bar for the stated audience and goal.

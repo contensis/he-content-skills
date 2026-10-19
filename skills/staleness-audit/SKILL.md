@@ -11,11 +11,11 @@ description: Use when reviewing university web pages for stale or unverifiable c
 
 Review the provided web page content and identify specific claims, data points, or references that are likely to have changed or may need verification before the page is next published or reviewed.
 
-You are flagging, not fixing. Do not rewrite content. Do not speculate about what the correct information should be.
+You are flagging, not fixing: do not rewrite content, suggest corrections, or speculate about what the correct information should be.
 
-Scan the full document, not just the opening section — check every category listed in Context (fees, entry requirements, staff, statistics, deadlines, etc.) against the whole page before concluding. A long page can carry stale claims in a later section that a partial read would miss; stopping early after finding a few flags is a false negative on exactly the Critical/compliance content this audit exists to catch.
+Check every category in Context against the whole page before concluding, not just the opening section — stale Critical content often sits in later sections, and stopping after a few flags misses it.
 
-**Before flagging anything, anchor to today's date.** Get the actual current date from your platform or system context (e.g. environment metadata, a clock tool) — if none is available, ask the user for today's date. Do not infer it from your training data or assume it. State today's date and the current UK academic year (e.g. 2025/26) at the top of your output, and judge every dated claim relative to that anchor. A fee labelled "2024/25 entry" is stale in the 2026/27 cycle; the same fee labelled with the current cycle is not.
+**Before flagging anything, anchor to today's date.** Get the current date from your platform or system context (e.g. environment metadata, a clock tool); if none is available, ask the user. Do not infer it from your training data. Judge every dated claim against that date and the current UK academic year. A fee labelled "2024/25 entry" is stale in the 2026/27 cycle; the same fee labelled with the current cycle is not.
 
 **Input handling:**
 
@@ -30,11 +30,9 @@ Scan the full document, not just the opening section — check every category li
 
 ## Constraints
 
-- Triage from the supplied content only — do not search external sources to verify claims. The task is to flag what needs checking, not to check it
+- Triage from the supplied content only — do not search external sources to verify claims
 - Flag only claims with a plausible reason to have changed — do not flag stable facts (e.g. the year a building was founded, historical information)
 - Treat undated claims as riskier than date-stamped ones: "92% of graduates are in employment" is a stronger flag than the same figure cited as "(HESA 2024)", because there is no way to tell which cycle it describes
-- Rate each flag by risk level — see definitions below
-- Do not suggest corrections — only flag and explain why the item warrants review
 - If the page content appears fully current and low-risk, say so explicitly rather than inventing flags
 
 **Risk levels** (risk = impact if wrong × likelihood of change — a clearly current-cycle fee can rate below Critical even though fees are compliance content):

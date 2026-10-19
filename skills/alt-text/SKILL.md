@@ -56,7 +56,7 @@ Notes: [any caveats — e.g. "confirm the name of the person pictured before pub
 **Mode B: Audit**
 Summary line: `X images reviewed — ❌ Y fail, ⚠️ Z warnings, ✅ W pass`
 
-Then a table, using the icons in the Rating column (✅ Pass, ⚠️ Warning, ❌ Fail):
+Then a table:
 
 | #   | Image / location | Existing alt text  | Rating     | Issue                   | Suggested fix                                |
 | --- | ---------------- | ------------------ | ---------- | ----------------------- | --------------------------------------------- |
