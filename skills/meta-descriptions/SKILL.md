@@ -15,6 +15,13 @@ If an existing meta description is supplied, first check it against the Constrai
 
 If given multiple pages, process every page and return results in a table — none omitted, regardless of list length.
 
+## Page URLs
+
+- Fetch each page's raw HTML (e.g. `curl`) where your tools allow, and read the existing description from the `content` attribute of `<meta name="description">` in full. Many fetch tools return extracted body text that drops `<head>` content or truncates it — never rate a description from that
+- As a last resort, if the raw HTML is blocked (e.g. 403 or a bot challenge), or has no description tag on a page that looks JavaScript-rendered (little body content), and you can drive a browser, load the page there and read the tag from the rendered DOM. Flag a description that only appears after rendering — some crawlers won't see it
+- No `<meta name="description">` tag, or an empty one → Existing is **None**. More than one tag → flag it
+- If you can't get the raw HTML or a rendered page, still write a description from the body text, mark Existing as **Not retrieved**, and ask for the current descriptions to be pasted (from View Source or the CMS) so they can be checked
+
 ## Context
 
 - **Platform:** University website
@@ -37,7 +44,7 @@ If given multiple pages, process every page and return results in a table — no
 
 **Single page:**
 ```
-Existing description: [Pass / Needs improvement / None supplied]
+Existing description: [Pass / Needs improvement / None / None supplied / Not retrieved]
 Meta description: [text]
 Characters: [count]
 Keyword included: [yes/no — state the keyword]

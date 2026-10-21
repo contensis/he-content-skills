@@ -18,9 +18,9 @@ Given the full text content of a single web page — headings, body copy, any FA
 **Input handling:**
 
 - Pasted plain text is the expected input — no HTML required
-- If given only a URL, fetch the page if your tools allow; otherwise ask for the content to be pasted
+- If given only a URL, fetch the page if your tools allow (as a last resort, if the fetch is blocked, load it in a browser if you can drive one); otherwise ask for the content to be pasted
 - If the content is too partial to audit fairly (a fragment, a single section), say so and list what is missing rather than rating it
-- If a fetched page is missing sections you would expect (fees, modules, entry requirements), they may sit in tabs or accordions loaded by JavaScript. Flag a possible rendering issue and ask for pasted content rather than rating those facts as absent. Note that many AI crawlers may not see that content either
+- If a fetched page is missing sections you would expect (fees, modules, entry requirements), they may sit in tabs or accordions loaded by JavaScript. If you can drive a browser, audit the rendered page; otherwise ask for pasted content rather than rating those facts as absent. Either way, flag the rendering issue — many AI crawlers may not see that content
 - If pasted plain text has no clear heading markers, infer headings from short standalone lines that introduce a following paragraph or list; if headings can't be distinguished from body copy with reasonable confidence, say so and ask for headings to be marked (e.g. with `##` or a trailing colon) rather than guessing at Dimension 2
 
 ## Context
