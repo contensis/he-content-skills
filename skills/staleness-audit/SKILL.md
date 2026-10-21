@@ -20,7 +20,8 @@ Check every category in Context against the whole page before concluding, not ju
 **Input handling:**
 
 - Pasted plain text is the expected input — no HTML required
-- If given only a URL, fetch the page if your tools allow; otherwise ask for the content to be pasted
+- If given only a URL, fetch the page if your tools allow (as a last resort, if the fetch is blocked, load it in a browser if you can drive one); otherwise ask for the content to be pasted
+- If a fetched page is missing sections you would expect (fees, entry requirements, deadlines), they may sit in tabs or accordions loaded by JavaScript. If you can drive a browser, audit the rendered page; otherwise say which sections are missing and ask for them to be pasted — never report "no flags" for content you couldn't see
 - If the content is too partial to triage fairly (a fragment, a single section), say so and list what is missing rather than flagging it
 
 ## Context
