@@ -25,9 +25,9 @@ If given only the site's home page or domain root, don't audit the whole site �
 
 **Scope.** Judge from markup and text only — no screenshots or colour-contrast measurement. A Green on Accessibility or Brand reflects markup-level signals, not a full visual/WCAG pass.
 
-**Raw HTML.** Criteria 3 and 7 need raw markup (`alt`, labels, ARIA, `<script>`), which many fetch tools strip. Use a raw-HTML fetch (e.g. `curl`) where available — no scripts in stripped text is not evidence of no analytics.
+**Raw HTML.** Criteria 3 and 7 need raw markup (`alt`, labels, ARIA, `<script>`), which many fetch tools strip. Use a raw-HTML fetch (e.g. `curl`) where available — no scripts in stripped text is not evidence of no analytics. As a last resort, if it's blocked (e.g. 403 or a bot challenge) and you can drive a browser, read the rendered DOM.
 
-**JavaScript rendering.** If a fetch lacks expected sections (e.g. fees on a course page, a footer) or most internal links, they are likely loaded by JavaScript. Rate the affected criteria Not assessed — a site-wide pattern means AI crawlers may miss them too.
+**JavaScript rendering.** If a fetch lacks expected sections (e.g. fees on a course page, a footer) or most internal links, they are likely loaded by JavaScript. If you can drive a browser, assess them from the rendered page; otherwise rate the affected criteria Not assessed. Either way flag it — a site-wide pattern means AI crawlers may miss them too.
 
 **Optional inputs:** a brand/style guide and/or quality bar. Without them, use the defaults under Brand and Quality and say so.
 
