@@ -20,10 +20,11 @@ Given a list of images with their existing alt text (or lack of it), a page URL,
 ## Page URLs
 
 - Fetch the page's raw HTML (e.g. `curl`) where your tools allow. Many fetch tools return extracted text, which strips `<img>` tags and `alt` attributes — never audit from that, and never treat "no images in the text" as "no images on the page"
+- As a last resort, if the raw HTML is blocked (e.g. 403 or a bot challenge) and you can drive a browser, load the page there and read the rendered DOM instead
 - From the markup, list every `<img>` (plus `<svg>` with `role="img"`, `<input type="image">`, and `<area>`) with its `src`, `alt` (or its absence), and context: enclosing link or button, `<figure>`/`<figcaption>`, adjacent heading or text
 - If your tools can view images, download each image file and look at it before writing a suggested fix. If not, base fixes on the filename, caption, and surrounding text, and mark each as "unverified — image not viewed"
-- If you can only get extracted text, say so and ask for the page source (View Source) or a list of image URLs with their alt text — do not stop at reporting the limitation
-- Images missing from the raw HTML may be injected by JavaScript or set as CSS backgrounds; note this rather than rating them absent
+- If none of these work and you can only get extracted text, say so and ask for the page source (View Source) or a list of image URLs with their alt text — do not stop at reporting the limitation
+- Images missing from the raw HTML may be injected by JavaScript or set as CSS backgrounds; check the rendered page in a browser if you can, otherwise note this rather than rating them absent
 
 ## Context
 
