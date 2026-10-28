@@ -11,7 +11,13 @@ description: Use when writing, rewriting, or reviewing meta descriptions for uni
 
 Given the body content of a web page (or a page title plus key points), write a meta description suitable for use in the page's `<meta name="description">` tag.
 
-If an existing meta description is supplied, first check it against the Constraints below and state whether it already **Passes** or **Needs improvement**, then propose a version to use. If it already Passes, the proposed version may be unchanged — do not rewrite a description that already meets every constraint just to show a different one.
+If an existing meta description is supplied, first check it against the Constraints below and rate it, then propose a version to use:
+
+- 🟢 **Pass** — meets every constraint. The proposed version may be unchanged — do not rewrite a description that already passes just to show a different one
+- 🟠 **Needs improvement** — usable but misses one or more constraints (e.g. 120–149 or over 160 characters, keyword missing, CTA missing or unneeded, starts with the institution name)
+- 🔴 **Fails** — under 120 characters, inaccurate or unsupported claims, clickbait, or duplicates the page title verbatim
+
+A missing or empty tag (**None**) also counts as 🔴.
 
 If given multiple pages, process every page and return results in a table — none omitted, regardless of list length.
 
@@ -19,7 +25,7 @@ If given multiple pages, process every page and return results in a table — no
 
 - Fetch each page's raw HTML (e.g. `curl`) where your tools allow, and read the existing description from the `content` attribute of `<meta name="description">` in full. Many fetch tools return extracted body text that drops `<head>` content or truncates it — never rate a description from that
 - As a last resort, if the raw HTML is blocked (e.g. 403 or a bot challenge), or has no description tag on a page that looks JavaScript-rendered (little body content), and you can drive a browser, load the page there and read the tag from the rendered DOM. Flag a description that only appears after rendering — some crawlers won't see it
-- No `<meta name="description">` tag, or an empty one → Existing is **None**. More than one tag → flag it
+- No `<meta name="description">` tag, or an empty one → Existing is 🔴 **None**. More than one tag → flag it
 - If you can't get the raw HTML or a rendered page, still write a description from the body text, mark Existing as **Not retrieved**, and ask for the current descriptions to be pasted (from View Source or the CMS) so they can be checked
 
 ## Context
@@ -44,7 +50,7 @@ If given multiple pages, process every page and return results in a table — no
 
 **Single page:**
 ```
-Existing description: [Pass / Needs improvement / None / None supplied / Not retrieved]
+Existing description: [🟢 Pass / 🟠 Needs improvement / 🔴 Fails / 🔴 None / None supplied / Not retrieved]
 Meta description: [text]
 Characters: [count]
 Keyword included: [yes/no — state the keyword]
